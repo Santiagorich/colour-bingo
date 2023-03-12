@@ -1,0 +1,110 @@
+/* Style the header row */
+.bingo-grid {
+  /* space between cells */
+  /* border-spacing: 0.25rem; */
+  border-collapse: collapse;
+  
+}
+.bingo-grid th {
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  padding: 20px;
+  background-color: #333;
+  color: #fff;
+}
+
+.bingo-grid td {
+  border: #333 2px solid;
+}
+
+/* Style the squares */
+.bingo-square {
+  padding: 10px;
+  font-size: 24px;
+  text-align: center;
+  vertical-align: middle;
+}
+
+/* Style the square background color */
+.bingo-square:hover {
+  background-color: #f2f2f2;
+}
+
+.bingo-container {
+  background-color: rgba(0, 0, 0,0.5);
+  width: fit-content;
+  /* border: #333 2px solid; */
+}
+
+.wrapper {
+  overflow: hidden;
+  position: relative;
+  border: #333 2px solid;
+  width: fit-content;
+  padding: 2rem 3rem 3rem 3rem;
+  height: 26rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  /* White Gradient from top to bottom */
+   
+}
+
+.brush {
+  position: absolute;
+  margin-bottom: -15px;
+  bottom: 0;
+  left: 0;
+  width: 20rem;
+  height: 20rem;
+  z-index: -1;
+}
+
+.bingo-header {
+  text-align: center;
+  /* Kid friendly font */
+  font-family: "Comic Sans MS", cursive, sans-serif;
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  border-radius: 20px;
+  padding: 1rem;
+}
+
+/* .border{
+  border: yellow 5px solid;
+  border-radius: 20px;
+} */
+
+/* .bingo-cell-wrapper {
+  border: #333 2px solid;
+  border-radius: 50%;
+  background-color: white;
+}  */
+
+.paint-splatter {
+  width: 5rem;
+  height: 5rem;
+}
+
+/* .bingogrids should be a a grid of 10 bingo cards */
+
+.bingogrids {
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+}
+
+@media print {
+  body * {
+    visibility: hidden;
+  }
+  #section-to-print, #section-to-print * {
+    visibility: visible;
+  }
+  #section-to-print {
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+}
