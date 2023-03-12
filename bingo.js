@@ -55,6 +55,7 @@ function shuffle(array) {
 // Get the container element where the bingo grid will be displayed
 // Nvm append it to the body
 function generate(amount){
+    document.querySelector('.bingogrids').innerHTML = '';
     for (let i = 0; i < amount; i++) {
         document.querySelector('.bingogrids').innerHTML += `
         <div class="wrapper">
